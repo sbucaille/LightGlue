@@ -103,6 +103,10 @@ if __name__ == "__main__":
 
     images = Path("assets")
     inputs = {
+        "eiffel": (
+            load_image(images / "eiffel1.jpg"),
+            load_image(images / "eiffel2.jpg"),
+        ),
         "easy": (
             load_image(images / "DSC_0411.JPG"),
             load_image(images / "DSC_0410.JPG"),

@@ -478,6 +478,8 @@ class LightGlue(nn.Module):
             assert key in data, f"Missing key {key} in data"
         data0, data1 = data["image0"], data["image1"]
         kpts0, kpts1 = data0["keypoints"], data1["keypoints"]
+        kpts0 = kpts0.unsqueeze(0)
+        kpts1 = kpts1.unsqueeze(0)
         b, m, _ = kpts0.shape
         b, n, _ = kpts1.shape
         device = kpts0.device
